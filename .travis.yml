@@ -5,7 +5,7 @@ services:
   
 script:  
   - curl https://build.phonegap.com/api/v1/apps/2053109/build/android?auth_token=$PHONEGAP_BUILD_TOKEN -X POST
-  - sleep 120
+  - sleep 90
   - curl https://build.phonegap.com/api/v1/apps/2053109/android?auth_token=$PHONEGAP_BUILD_TOKEN > android-debug.apk
   - ls
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
