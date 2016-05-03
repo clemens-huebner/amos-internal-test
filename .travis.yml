@@ -4,7 +4,8 @@ services:
   - docker
   
 script:  
-  - curl https://build.phonegap.com/api/v1/me?auth_token=$PHONEGAP_BUILD_TOKEN
+  - curl https://build.phonegap.com/api/v1/apps/2053109/build/android?auth_token=$PHONEGAP_BUILD_TOKEN -X POST
+  - curl https://build.phonegap.com/api/v1/apps/2053109/android?auth_token=$PHONEGAP_BUILD_TOKEN
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker pull kallikrein/cordova:5.1.1
   - docker build -t clemenshuebner/amos-ss16-proj8-ionic-pgb:1.0 .
