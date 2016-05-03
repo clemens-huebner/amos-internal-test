@@ -13,7 +13,7 @@ ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 # update and accept licences
 RUN ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | /usr/local/android-sdk-linux/tools/android update sdk --no-ui -a --filter platform-tool,build-tools-23.0.3,android-23
 
-RUN ln -s /src/.debug.keystore /root/.android/debug.keystore
+
 
 ENV IONIC_VERSION=1.7.14 \
     BOWER_VERSION=1.7.9 \
