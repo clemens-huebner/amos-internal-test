@@ -5,6 +5,6 @@ services:
   
 script:  
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker pull kallikrein/cordova:5.1.1
-  - docker build -t clemenshuebner/amos-ss16-proj8:1.0 .
-  - docker push clemenshuebner/amos-ss16-proj8:1.0
+  - docker pull clemenshuebner/amos-ss16-proj8:1.0
+  - docker build -t clemenshuebner/amos-ss16-proj8-ionic-build:1.0 .
+  - docker push clemenshuebner/amos-ss16-proj8-ionic-build:1.0
