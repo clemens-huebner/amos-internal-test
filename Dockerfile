@@ -1,4 +1,5 @@
-FROM osrgroup/amos-downloader-base-image:1.0
+FROM clemenshuebner/amos-ss16-proj8-ionic-build:1.0
 
-ENV HTML_INDEX_FILE MyConference.apk
-ADD assets/$HTML_INDEX_FILE /var/www/html/$HTML_INDEX_FILE
+RUN ionic start TestApp tabs
+RUN cd TestApp
+RUN phonegap serve -p 80
