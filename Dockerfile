@@ -15,7 +15,7 @@ RUN ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | /usr/local/android-sd
 
 
 
-ENV IONIC_VERSION=1.7.14 \
+ENV IONIC_VERSION=1.7.15 \
     BOWER_VERSION=1.7.9 \
     CORDOVA_VERSION=6.1.1 \
     PHONEGAP_VERSION=6.1.0 \
